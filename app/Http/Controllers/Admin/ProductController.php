@@ -27,7 +27,10 @@ class ProductController extends Controller
 
     public function create()
     {
-        echo 123;
+        return view('admin.product.add', [
+            'title' => 'Thêm Sản Phẩm Mới',
+            'menus' => $this->productService->getMenu()
+        ]);
     }
 
 
